@@ -9,6 +9,6 @@ def load_data(url):
     return df
 
 st.write("데이터 로딩 시작...")
-df = load_data('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+df = load_data('bike.csv')
 st.write('데이터 로딩 완료!! :sunglasses:')
 st.dataframe(df)
