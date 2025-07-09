@@ -1,5 +1,4 @@
 import streamlit as st
-from click import option
 
 # 1. 버튼(Button)
 if st.button('눌러보세요'):
