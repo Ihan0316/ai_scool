@@ -4,7 +4,8 @@ import pandas as pd
 import streamlit as st
 
 st.header('st.write')
-st.write('hello, *world!* : sunglasses')
+import streamlit as st
+st.write('Hello, *World!* :sunglasses:')
 st.write(1234)
 
 df = pd.DataFrame({
