@@ -35,7 +35,7 @@ print( wine.groupby('type')['quality'].std() )
 print( wine.groupby('type')['quality'].agg(['mean', 'std']) )
 
 from scipy import stats
-from statsmodels.formula.api import ols, glm
+from statsmodels.formula.api import ols
 
 red_wine_quality = wine.loc[wine['type'] == 'red', 'quality']
 #print( red_wine_quality )
@@ -85,7 +85,7 @@ sns.distplot(red_wine_quality, kde = True, color = "red", label = 'red wine')
 sns.distplot(white_wine_quality, kde = True, color = "blue", label = 'white wine')
 plt.title("Quality of wine Type")
 plt.legend()
-#plt.show()
+plt.show()
 
 # 부분 회귀플롯으로 시각화 하기
 import statsmodels.api as sm
