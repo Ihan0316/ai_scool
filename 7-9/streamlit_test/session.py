@@ -33,12 +33,12 @@ st.text_input("Your name", key="name")
 # st.session_state.name
 
 # 콜백 함수
-def form_callback():
-    st.write(st.session_state.my_slider)
-    st.write(st.session_state.my_checkbox)
+def form_callback(): # 함수 이름을 form_callback 으로 설정, 매개변수 는 없음
+    st.write(st.session_state.my_slider) # st.session_state.my_slider의 값을 쓰기
+    st.write(st.session_state.my_checkbox) # st.session_state.my_checkbox의 값을 쓰기
 
 # 폼에 어떤 값을 넣을지 설정
-with st.form(key='my_form'):
-    slider_input = st.slider('My slider', 0, 10, 5, key='my_slider')
-    checkbox_input = st.checkbox('Yes or No', key='my_checkbox')
-    submit_button = st.form_submit_button(label='Submit', on_click=form_callback)
+with st.form(key='my_form'): # 폼의 키를 my_form 으로 설정
+    slider_input = st.slider('My slider', 0, 10, 5, key='my_slider') # slider 이름을 My slider로 지정, 0~10 범위로 지정, 디폴트 값을 5로 지정, key 값을 my_slider로 설정
+    checkbox_input = st.checkbox('Yes or No', key='my_checkbox')    # checkbox의 값을 Yes or No로 설정, key 값을 my_checkbox로 설정
+    submit_button = st.form_submit_button(label='Submit', on_click=form_callback) # form_submit_button의 label을 Submit 으로 설정, on_click(클릭시 실행 함수)를 form_callback 으로 설정
