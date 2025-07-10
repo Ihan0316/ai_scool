@@ -1,5 +1,5 @@
-.env
-.csv
-.json
-.jpg
-.xml
+**/.env
+**/.csv**/
+**/.json
+**/.jpg
+**/.xml
