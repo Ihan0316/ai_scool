@@ -3,6 +3,7 @@ import pandas as pd
 
 st.set_page_config(layout="centered")
 
+
 @st.cache_data(show_spinner=False)
 def load_data(file_path):
     dataset = pd.read_csv(file_path)
@@ -25,9 +26,7 @@ if file_path:
         with top_menu[1]:
             sort_field = st.selectbox("Sort By", options=dataset.columns)
         with top_menu[2]:
-            sort_direction = st.radio(
-                "Direction", options=["⬆️", "⬇️"], horizontal=True
-            )
+            sort_direction = st.radio("Direction", options=["⬆️", "⬇️"], horizontal=True)
         dataset = dataset.sort_values(
             by=sort_field, ascending=sort_direction == "⬆️", ignore_index=True
         )
@@ -45,8 +44,6 @@ if file_path:
         )
     with bottom_menu[0]:
         st.markdown(f"Page **{current_page}** of **{total_pages}** ")
-
-
 
     pages = split_frame(dataset, batch_size)
     pagination.dataframe(data=pages[current_page - 1], use_container_width=True)
