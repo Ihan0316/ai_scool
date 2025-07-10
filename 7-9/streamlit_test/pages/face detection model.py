@@ -4,7 +4,7 @@ import numpy as np
 
 st.set_page_config(layout="centered")
 
-cascade_file = cv2.data.haarcascades + "haarcascade_frontalface_alt.xml"
+cascade_file = "./static/haarcascade_frontalface_alt.xml"
 
 uploaded_file = st.file_uploader(
     "이미지 파일을 업로드 해 주세요", type=["jpg", "jpeg", "png"]
