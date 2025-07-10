@@ -16,7 +16,7 @@ if uploaded_file is not None:
     # 업로드된 이미지 파일 읽어오기
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
-    st.image(uploaded_file, caption="업로드된 이미지", use_column_width=True)
+    st.image(uploaded_file, caption="업로드된 이미지", use_container_width=True)
 
     # 그레이스케일로 변환하기
     image_gs = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -39,7 +39,7 @@ if uploaded_file is not None:
         st.image(
             cv2.cvtColor(image, cv2.COLOR_BGR2RGB),
             caption="인식된 얼굴",
-            use_column_width=True,
+            use_container_width=True,
         )
 
         # Save button
