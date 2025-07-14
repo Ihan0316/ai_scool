@@ -30,7 +30,7 @@ if submitted:
         w = float(weight)
         if h <= 0 or w <= 0:
             st.error("키와 몸무게는 0보다 커야 합니다.")
-        elif h > 201 or w > 101:
+        elif h > 200 or w > 200:
             st.error("입력값이 비현실적입니다. 다시 확인해주세요.")
         else:
             pred = loaded_model.predict([[h, w]])[0]
