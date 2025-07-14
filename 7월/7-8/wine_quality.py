@@ -1,8 +1,8 @@
 import pandas as pd
 
-red_df = pd.read_csv('winequality-red.csv', header = 0, engine = 'python')
+red_df = pd.read_csv('winequality-red.csv', header = 0, engine ='python')
 #print(red_df)
-white_df = pd.read_csv('winequality-white.csv', header = 0, engine = 'python')
+white_df = pd.read_csv('winequality-white.csv', header = 0, engine ='python')
 #print(white_df)
 
 red_df.insert(0, column='type', value='red')

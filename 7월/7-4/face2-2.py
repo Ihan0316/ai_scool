@@ -1,7 +1,7 @@
 import cv2
 
 # 입력 파일
-image_file = "./man2.jpg"
+image_file = "man2.jpg"
 
 # 캐스케이드 파일의 경로 지정하기
 cascade_file = "haarcascade_frontalface_alt.xml"
