@@ -19,7 +19,7 @@ with st.form("bmi_form"):
     submitted = st.form_submit_button("예측하기")
 
 # 모델 로드
-with open('./bmi_predict.pkl', 'rb') as f:
+with open('model/bmi_predict.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 
 # 예측 및 결과 표시
