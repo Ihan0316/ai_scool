@@ -36,9 +36,9 @@ st.markdown("""
 with st.form("bmi_form"):
     col1, col2 = st.columns([0.45, 0.45])  # 컬럼 비율 조정
     with col1:
-        height = st.text_input('📏 키 (cm)', placeholder="예: 170", help="150~200 cm 범위 권장")
+        height = st.slider('📏 키 (cm)', min_value=130, max_value=210, value=170, step=1, help="150~200 cm 범위 권장")
     with col2:
-        weight = st.text_input('⚖️ 몸무게 (kg)', placeholder="예: 65", help="30~120 kg 범위 권장")
+        weight = st.slider('⚖️ 몸무게 (kg)', min_value=30, max_value=150, value=65, step=1, help="30~120 kg 범위 권장")
     submitted = st.form_submit_button("🔮 예측하기", use_container_width=True)
 
 # 모델 로드
