@@ -4,23 +4,30 @@ import numpy as np
 
 st.title("1. 주택 정보 입력")
 
-# 1. 입력값 받기 (모델 feature 순서에 맞게)
-crim = st.slider("범죄율 (CRIM)", 0.0, 100.0, 10.0)
-zn = st.slider("25,000평방미터 초과 거주지역 비율 (ZN)", 0.0, 100.0, 0.0)
-indus = st.slider("비상업지역 넓이 비율 (INDUS)", 0.0, 30.0, 5.0)
-chas = st.selectbox("찰스강 경계 여부 (CHAS)", [0, 1], format_func=lambda x: "예" if x==1 else "아니오")
-nox = st.slider("일산화질소 농도 (NOX)", 0.0, 1.0, 0.5)
-rm = st.slider("방의 개수 (RM)", 1.0, 10.0, 6.0)
-age = st.slider("1940년 이전 건축 비율 (AGE)", 0.0, 100.0, 50.0)
-dis = st.slider("직업센터까지 거리 (DIS)", 0.0, 15.0, 5.0)
-rad = st.slider("고속도로 접근 용이성 (RAD)", 1, 24, 1)
-tax = st.slider("재산세 비율 (TAX)", 100, 800, 300)
-ptratio = st.slider("교사와 학생 수 비율 (PTRATIO)", 10.0, 30.0, 15.0)
-b = st.slider("흑인 거주 비율 (B)", 0.0, 400.0, 350.0)
-lstat = st.slider("하위 계층 비율 (LSTAT)", 0.0, 40.0, 10.0)
+# 두 개의 컬럼 만들기
+col1, col2 = st.columns(2)
+
+# 왼쪽 컬럼에 배치될 입력 요소들
+with col1:
+    crim = st.slider("범죄율 (CRIM)", 0, 100, 10)
+    zn = st.slider("25,000평방미터 초과 거주지역 비율 (ZN)", 0, 100, 0)
+    indus = st.slider("비상업지역 넓이 비율 (INDUS)", 0, 30, 5)
+    chas = st.selectbox("찰스강 경계 여부 (CHAS)", [0, 1], format_func=lambda x: "예" if x == 1 else "아니오")
+    nox = st.slider("일산화질소 농도 (NOX)", 0, 1, 0)
+    rm = st.number_input("방의 개수 (RM)", 1, 10, 6, step=1)
+
+# 오른쪽 컬럼에 배치될 입력 요소들
+with col2:
+    age = st.slider("1940년 이전 건축 비율 (AGE)", 0, 100, 50)
+    dis = st.slider("직업센터까지 거리 (DIS)", 0, 15, 5)
+    tax = st.slider("재산세 비율 (TAX)", 100, 800, 300)
+    ptratio = st.slider("교사와 학생 수 비율 (PTRATIO)", 10, 30, 15)
+    b = st.slider("흑인 거주 비율 (B)", 0, 400, 350)
+    lstat = st.slider("하위 계층 비율 (LSTAT)", 0, 40, 10)
 
 st.markdown("## 2. 옵션 선택")
 # (RAD는 위에서 이미 입력받음)
+rad = st.checkbox("고속도로 접근 용이성 (RAD)", value=True)
 
 if st.button("가격 예측하기"):
     # 입력값을 numpy array로 변환 (2차원)
