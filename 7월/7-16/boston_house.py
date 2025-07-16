@@ -8,6 +8,7 @@ st.title("1. 주택 정보 입력")
 col1, col2 = st.columns(2)
 
 # 왼쪽 컬럼에 배치될 입력 요소들
+# st.함수("나타낼 내용", 시작값, 끝값, 디폴트 값, step=단계 지정....)
 with col1:
     rm = st.number_input("방의 개수 (RM)", 1, 10, 6, step=1)
     chas = st.selectbox("찰스강 경계 여부 (CHAS)", [0, 1], format_func=lambda x: "예" if x == 1 else "아니오")
@@ -26,7 +27,9 @@ with col2:
     rad = st.slider("고속도로 접근 용이성 (RAD)", 0, 24, 0)
 
 st.markdown("## 2. 옵션 선택")
-nox = st.checkbox("일산화질소 농도 (NOX)")
+# st.checkbox() 는 T or F 로만 지정가능
+# 값 모델에 입력시 int 형으로 형변환 해야 함
+nox = int(st.checkbox("일산화질소 농도 (NOX)"))
 
 if st.button("가격 예측하기"):
     # 입력값을 numpy array로 변환 (2차원)
