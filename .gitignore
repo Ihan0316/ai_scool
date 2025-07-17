@@ -1,8 +1,9 @@
-**/.env
-**/.csv
-**/.json
-**/.jpg
-**/.jpeg
-**/.xml
-**/.toml
-**/.pkl
+.env
+.csv
+.json
+.jpg
+.jpeg
+.xml
+.toml
+.pkl
+.DS_Store
