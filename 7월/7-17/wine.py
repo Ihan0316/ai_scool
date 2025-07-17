@@ -9,7 +9,6 @@ alcohol = st.number_input("alcohol", 8.0, 14.9, step=0.1)
 sugar = st.number_input("sugar", 0.6, 65.8, step=0.1)
 pH = st.number_input("pH", 2.72, 4.01, step=0.01)
 
-
 if st.button("와인 예측하기"):
 
     input_data = np.array([[alcohol, sugar, pH]])
@@ -24,4 +23,3 @@ if st.button("와인 예측하기"):
     else:
         pred = '레드 와인'
     st.success(f"예상 와인: {pred}")
-
