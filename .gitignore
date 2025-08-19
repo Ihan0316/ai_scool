@@ -26,3 +26,13 @@
 *.tfevents
 *.pickle
 *.p
+/.idea/.gitignore
+/7월/7-9/.idea/.gitignore
+/7월/7-9/streamlit_test/.idea/.gitignore
+/7월/7-25/aclImdb_v1_archive
+/7월/7-25/aclImdb_v1/aclImdb/README
+/8월/8-13/data/FashionMNIST/raw/t10k-images-idx3-ubyte
+/8월/8-13/data/FashionMNIST/raw/t10k-labels-idx1-ubyte
+/8월/8-13/data/FashionMNIST/raw/train-images-idx3-ubyte
+/8월/8-13/data/FashionMNIST/raw/train-labels-idx1-ubyte
+/7월/7-25/models/imdb_model_r/variables/variables.data-00000-of-00001
