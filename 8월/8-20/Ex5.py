@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-gry_img = cv2.imread('/Users/ihanjo/Library/CloudStorage/GoogleDrive-ihann5726@gmail.com/내 드라이브/인공지능 사관학교/Coding/8월/8-20/maltipoo.jpg', cv2.IMREAD_GRAYSCALE)
+gry_img = cv2.imread('./8월/8-20/maltipoo.jpg', cv2.IMREAD_GRAYSCALE)
 
 print("변환 전")
 print(gry_img.shape)
