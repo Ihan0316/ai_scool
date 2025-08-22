@@ -1,8 +1,8 @@
 import cv2
 import matplotlib.pyplot as plt
 
-data1 = cv2.imread('/Users/ihanjo/Library/CloudStorage/GoogleDrive-ihann5726@gmail.com/내 드라이브/인공지능 사관학교/Coding/8월/8-20/maltipoo.jpg', cv2.IMREAD_COLOR)
-data2 = cv2.imread('/Users/ihanjo/Library/CloudStorage/GoogleDrive-ihann5726@gmail.com/내 드라이브/인공지능 사관학교/Coding/8월/8-20/maltipoo.jpg', cv2.IMREAD_GRAYSCALE)
+data1 = cv2.imread('./8월/8-20/maltipoo.jpg', cv2.IMREAD_COLOR)
+data2 = cv2.imread('./8월/8-20/maltipoo.jpg', cv2.IMREAD_GRAYSCALE)
 
 cv2.namedWindow('image')
 cv2.imshow('image', data1)

@@ -15,7 +15,7 @@ if ret == False:
 codec = cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')
 fps = 30
 h,w = img.shape[:2]
-m_v = cv2.VideoWriter('/Users/ihanjo/Library/CloudStorage/GoogleDrive-ihann5726@gmail.com/내 드라이브/인공지능 사관학교/Coding/8월/8-20/m_v.avi', codec, fps, (w, h))
+m_v = cv2.VideoWriter('./Coding/8월/8-20/m_v.avi', codec, fps, (w, h))
 
 if m_v.isOpened() == False:
     print("비디오 생성 실패")
