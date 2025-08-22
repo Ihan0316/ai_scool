@@ -19,7 +19,7 @@ def draw(event, x, y, f, p):
        ck.reverse()
     cv2.imshow('Image', img)
 
-cv2.imshow('Image', img) # 화면 생성(윈도우 생성으로 변환 가능ㄴ)
+cv2.imshow('Image', img) # 화면 생성(윈도우 생성으로 변환 가능)
 cv2.setMouseCallback('Image', draw) # 콜백 함수 정의
 
 run=True
