@@ -20,6 +20,7 @@
 *.joblib
 *.png
 *.zip
+*.tar
 *.feat
 *.bmp
 *.vocab
