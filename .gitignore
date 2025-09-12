@@ -27,6 +27,7 @@
 *.tfevents
 *.pickle
 *.p
+*.pt
 *.meta
 /.idea/.gitignore
 /7월/7-9/.idea/.gitignore
