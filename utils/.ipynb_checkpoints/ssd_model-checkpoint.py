@@ -381,7 +381,7 @@ class Detect(nn.Module):
 
                 l_mask = c_mask.unsqueeze(1).expand_as(decoded_boxes)
                 boxes = decoded_boxes[l_mask].view(-1, 4)
-)
+
                 ids, count = nm_suppression(
                     boxes, scores, self.nms_thresh, self.top_k)
 
