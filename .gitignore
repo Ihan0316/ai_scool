@@ -29,6 +29,7 @@
 *.p
 *.pt
 *.meta
+*.mat
 /.idea/.gitignore
 /7월/7-9/.idea/.gitignore
 /7월/7-9/streamlit_test/.idea/.gitignore
